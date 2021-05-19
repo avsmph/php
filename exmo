@@ -20,7 +20,6 @@ $NONCE = $mt[1] . substr($mt[0], 2, 6);
 //https://api.exmo.com/v1.1/order_trades
 //https://api.exmo.com/v1.1/currency
 
-
 $url = "https://api.exmo.com/v1.1/trades"; 
 
 $req['nonce'] = $NONCE;
@@ -32,7 +31,6 @@ $req['pair'] = 'ETH_RUB';
 if ($url == "https://api.exmo.com/v1.1/order_trades") {
 $req['order_id'] = '';
 }
-
 
 // generate the POST data string
 $post_data = http_build_query($req, '', '&');
